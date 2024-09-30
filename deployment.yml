@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: my-app1
   namespace: default
   labels:
-    app: my-app
+    app: my-app1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app
+      app: my-app1
   template:
     metadata:
       labels:
-        app: my-app
+        app: my-app1
     spec:
       containers:
-      - name: my-app
+      - name: my-app1
         image: 288761750357.dkr.ecr.ap-southeast-1.amazonaws.com/mansi-30:latest
         imagePullPolicy: Always
         ports:
